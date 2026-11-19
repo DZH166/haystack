@@ -180,7 +180,7 @@ class PipelineTool(ComponentTool):
                 "documents": {"handler": custom_handler}
             }
             ```
-        :raises ValueError: If the provided pipeline is not a valid Haystack Pipeline instance.
+        :raises TypeError: If the provided pipeline is not a valid Haystack Pipeline instance.
         """
         if not isinstance(pipeline, Pipeline):
             raise TypeError(f"The 'pipeline' parameter must be an instance of Pipeline. Got {type(pipeline)} instead.")
