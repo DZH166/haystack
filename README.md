@@ -79,7 +79,7 @@
 | haystack/components/generators/chat/llm.py                                 |       40 |        1 |     98% |       123 |
 | haystack/components/generators/chat/mock.py                                |      154 |        0 |    100% |           |
 | haystack/components/generators/chat/openai.py                              |      251 |        4 |     98% |489, 557, 771, 873 |
-| haystack/components/generators/chat/openai\_responses.py                   |      433 |       25 |     94% |313, 438, 521, 538, 576, 601, 654-663, 738, 754-763, 777, 981-982, 1016, 1107, 1130, 1149 |
+| haystack/components/generators/chat/openai\_responses.py                   |      443 |       25 |     94% |316, 441, 524, 541, 579, 604, 657-666, 756, 772-781, 795, 1005-1006, 1040, 1134, 1157, 1176 |
 | haystack/components/generators/chat/types/\_\_init\_\_.py                  |        2 |        0 |    100% |           |
 | haystack/components/generators/chat/types/protocol.py                      |        4 |        0 |    100% |           |
 | haystack/components/generators/openai\_image\_generator.py                 |       80 |        0 |    100% |           |
@@ -96,7 +96,7 @@
 | haystack/components/preprocessors/csv\_document\_splitter.py               |      108 |        4 |     96% |130, 133, 144-148 |
 | haystack/components/preprocessors/document\_cleaner.py                     |      129 |        1 |     99% |       109 |
 | haystack/components/preprocessors/document\_preprocessor.py                |       47 |        2 |     96% |  168, 204 |
-| haystack/components/preprocessors/document\_splitter.py                    |      280 |        1 |     99% |       213 |
+| haystack/components/preprocessors/document\_splitter.py                    |      280 |        1 |     99% |       214 |
 | haystack/components/preprocessors/embedding\_based\_document\_splitter.py  |      230 |       12 |     95% |300-301, 432, 484-496, 514, 531, 600-601 |
 | haystack/components/preprocessors/hierarchical\_document\_splitter.py      |       70 |        0 |    100% |           |
 | haystack/components/preprocessors/markdown\_header\_splitter.py            |      176 |        6 |     97% |296-297, 312-313, 377, 444 |
@@ -152,7 +152,7 @@
 | haystack/core/pipeline/component\_checks.py                                |       66 |        0 |    100% |           |
 | haystack/core/pipeline/descriptions.py                                     |        6 |        0 |    100% |           |
 | haystack/core/pipeline/draw.py                                             |      199 |       41 |     79% |35-58, 142, 145, 148, 150, 158, 162-169, 296, 306, 378-380, 385, 393-394, 422-427 |
-| haystack/core/pipeline/pipeline.py                                         |      331 |        9 |     97% |174, 181, 427, 570, 605, 968, 973, 1009, 1085 |
+| haystack/core/pipeline/pipeline.py                                         |      331 |       11 |     97% |174, 181, 427, 570, 605, 965-969, 973, 1009, 1085 |
 | haystack/core/pipeline/utils.py                                            |       74 |        1 |     99% |       215 |
 | haystack/core/serialization.py                                             |      129 |        6 |     95% |76, 100, 247, 334, 350-351 |
 | haystack/core/serialization\_security.py                                   |      135 |        0 |    100% |           |
@@ -191,7 +191,7 @@
 | haystack/hooks/compaction/\_\_init\_\_.py                                  |        5 |        0 |    100% |           |
 | haystack/hooks/compaction/hooks.py                                         |      111 |        1 |     99% |       296 |
 | haystack/hooks/compaction/sliding\_window.py                               |       82 |        0 |    100% |           |
-| haystack/hooks/compaction/summarization.py                                 |      171 |       16 |     91% |89, 314-317, 475-479, 483-484, 488-492 |
+| haystack/hooks/compaction/summarization.py                                 |      175 |       13 |     93% |92, 483-487, 491-492, 496-500 |
 | haystack/hooks/compaction/tool\_result\_offloading.py                      |       52 |        1 |     98% |       165 |
 | haystack/hooks/compaction/tool\_result\_pruning.py                         |       36 |        0 |    100% |           |
 | haystack/hooks/compaction/types/\_\_init\_\_.py                            |        2 |        0 |    100% |           |
@@ -279,7 +279,7 @@
 | haystack/utils/type\_serialization.py                                      |      144 |        6 |     96% |106, 108, 260-261, 269, 285 |
 | haystack/utils/url\_validation.py                                          |        4 |        0 |    100% |           |
 | haystack/version.py                                                        |        5 |        2 |     60% |      9-10 |
-| **TOTAL**                                                                  | **18945** |  **661** | **97%** |           |
+| **TOTAL**                                                                  | **18959** |  **660** | **97%** |           |
 
 
 ## Setup coverage badge
