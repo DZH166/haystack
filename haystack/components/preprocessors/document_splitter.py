@@ -246,6 +246,11 @@ class DocumentSplitter:
 
         result = self.sentence_splitter.split_sentences(doc.content)  # type: ignore # None check is done in run()
         units = [sentence["sentence"] for sentence in result]
+        if not units and doc.content:
+            # The tokenizer returns no sentence for text it cannot split, such as text made only of whitespace, line
+            # breaks or page breaks. Such content is not empty, so it must still produce a split: `skip_empty_documents`
+            # drops documents whose content is empty only, and the other split modes keep this content as well.
+            units = [doc.content]
 
         if self.respect_sentence_boundary:
             text_splits, splits_pages, splits_start_idxs = self._concatenate_sentences_based_on_word_amount(

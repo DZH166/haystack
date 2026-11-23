@@ -1,0 +1,7 @@
+---
+fixes:
+  - |
+    `DocumentSplitter` no longer drops a document whose content is only whitespace, line breaks or page breaks when it
+    splits by `sentence`, or by `word` with `respect_sentence_boundary=True`. The sentence tokenizer finds no sentence
+    in such text and the component returned no document at all, losing the text; the content is now kept as a single
+    split, as the other split modes already do.

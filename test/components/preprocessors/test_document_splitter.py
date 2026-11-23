@@ -736,6 +736,18 @@ class TestSplittingNLTKSentenceSplitter:
         )
         assert num_sentences == expected_num_sentences
 
+    @pytest.mark.parametrize(
+        "splitter_kwargs",
+        [{"split_by": "sentence"}, {"split_by": "word", "respect_sentence_boundary": True}],
+    )
+    def test_keeps_document_with_whitespace_only_content(self, splitter_kwargs) -> None:
+        # The sentence tokenizer finds no sentence in text made only of whitespace and line breaks. Such content is not
+        # empty, so the document must not be dropped: `skip_empty_documents` only applies to empty content, and the
+        # other split modes keep the document as well.
+        splitter = DocumentSplitter(**splitter_kwargs)
+        documents = splitter.run(documents=[Document(content=" \n ")])["documents"]
+        assert [doc.content for doc in documents] == [" \n "]
+
     def test_number_of_sentences_to_keep_split_overlap_zero(self) -> None:
         sentences = [
             "Moonlight shimmered softly, wolves howled nearby, night enveloped everything.",
